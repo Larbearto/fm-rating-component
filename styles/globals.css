@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-verydarkblue;
+  }
+  li {
+    @apply px-5 py-3 text-mediumgrey text-sm font-semibold rounded-full bg-darkblue m-3 justify-center items-center hover:bg-primary hover:text-white;
+  }
+}
+
+@layer components {
+  .stars-rating input[type='radio'] {
+    display: none;
+  }
+  .stars-rating .star-light {
+    cursor: pointer;
+    color: #edbb00;
+  }
+  .stars-rating .star-dark {
+    cursor: pointer;
+    color: #ddd;
+  }
+}
