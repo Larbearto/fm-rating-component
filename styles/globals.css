@@ -1,28 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  body {
-    @apply bg-verydarkblue;
-  }
-  li {
-    @apply px-5 py-3 text-mediumgrey text-sm font-semibold rounded-full bg-darkblue m-3 justify-center items-center hover:bg-primary hover:text-white;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@layer components {
-  .stars-rating input[type='radio'] {
-    display: none;
-  }
-  .stars-rating .star-light {
-    cursor: pointer;
-    color: #edbb00;
-  }
-  .stars-rating .star-dark {
-    cursor: pointer;
-    color: #ddd;
-  }
+body {
+  background-color: hsl(216, 12%, 8%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  color: hsl(216, 12%, 54%);
+}
+
+.card-container {
+  font-family: 'Overpass', sans-serif;
+  max-width: 375px;
+  border-radius: 20px;
+  background: linear-gradient(hsl(213, 19%, 18%), hsl(216, 12%, 8%));
+  padding: 30px;
+  margin: 20px auto;
+  line-height: 22px;
+}
+
+.card-header {
+  margin: 40px 0 20px;
+  color: #fff;
+}
+
+.card-text {
+  margin: 30px 0 30px;
+  font-size: 15px;
+  color: hsl(217, 12%, 63%);
+}
+
+.star-wrap,
+.numberbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  width: 50px;
+  height: 50px;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 50%;
+  border: none;
+  color: hsl(216, 12%, 54%);
+}
+
+.numberbtn {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.numberbtn:hover {
+  background: hsl(25, 97% 53%);
+  color: #fff;
+  background-color: hsl(25, 97%, 53%);
+}
+
+.active {
+  background: hsl(217, 12%, 63%);
+  color: #fff;
+}
+
+.numbers {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px 20px 0;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: hsl(25, 97%, 53%);
+  padding: 15px;
+  border-radius: 30px;
+  letter-spacing: 3px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  margin-top: 10px;
+  border: none;
+}
+
+.submit-btn:hover {
+  background-color: #fff;
+  color: hsl(25, 97%, 53%);
+}
+
+.submit-btn {
+  background-color: hsl(25, 97%, 53%);
+  color: #fff;
+}
+
+.thankyou {
+  text-align: center;
+}
+
+.results {
+  border-radius: 30px;
+  background-color: hsl(213, 19%, 18%);
+  font-size: 14px;
+  color: hsl(25, 97%, 53%);
+  margin: 14px 50px 0;
+  padding: 6px 4px;
 }
